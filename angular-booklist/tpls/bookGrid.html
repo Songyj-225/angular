@@ -1,7 +1,10 @@
 <div ng-controller="BookListCtrl" class="bai">
-    <div class="row">
-        <div class="col-md-12 form-group">
-        	<a ui-sref="addbook" class="btn btn-success">新增书籍</a>
+    <div class="row form-group">
+        <div class="col-md-6 ">
+            <a ui-sref="addbook" class="btn btn-success">新增书籍</a>
+        </div>
+        <div class="col-md-6">
+            <input type="text" ng-model="filterOptions.filterText" placeholder="请输入查询关键字..." class="form-control searchText"/>
         </div>
     </div>
     <div class="row">

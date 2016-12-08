@@ -110,6 +110,7 @@ bookListModule.controller('BookListCtrl', function($scope, $http, $state, $state
         enableRowSelection: false,//是否能选择行
         enableCellEdit: true,//是否能修改内容
         enablePinning: true,  //是否被锁住了
+        i18n: 'zh-cn',
         columnDefs: [{
             field: 'index',//这里是数据中的属性名
             displayName: '序号', //这里是表格的每一列的名称

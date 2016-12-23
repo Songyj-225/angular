@@ -70,7 +70,7 @@ bookListModule.controller('BookListCtrl', function($scope, $http, $state, $state
             var data;
             if (searchText) {
                 var ft = searchText.toLowerCase();
-                $http.get('../src/data/books' + $stateParams.bookType + '.json')//通过传值调用不同json
+                $http.get('./data/books' + $stateParams.bookType + '.json')//通过传值调用不同json
                     .success(function(largeLoad) {
                         data = largeLoad.filter(function(item) {
                             return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
@@ -78,7 +78,7 @@ bookListModule.controller('BookListCtrl', function($scope, $http, $state, $state
                         $scope.setPagingData(data, page, pageSize);
                     });
             } else {
-                $http.get('../src/data/books' + $stateParams.bookType + '.json')
+                $http.get('./data/books' + $stateParams.bookType + '.json')
                     .success(function(largeLoad) {
                         $scope.setPagingData(largeLoad, page, pageSize);
                     });
